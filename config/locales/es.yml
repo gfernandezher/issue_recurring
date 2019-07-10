@@ -1,0 +1,127 @@
+# English strings go here for Rails i18n
+es:
+  errors:
+    format: '%{message}'
+  activerecord:
+    errors:
+      models:
+        issue_recurrence:
+          attributes:
+            issue:
+              insufficient_privileges: 'no tiene permisos para editar la recurrencias de esta peticion'
+            anchor_mode:
+              delay_fixed_only: 'no se pueden aplicar retrasos a las recurrencias basados en la fecha de cierre'
+              blank_dates_flexible_only: 'solo recurrencias basadas en la fecha de cierre pueden ser creadas para peticiones con fecha de inicio y fin en blanco'
+              in_place_flexible_only: 'solo recurrencias basadas en la fecha de fin pueden modificar peticiones en curso'
+            creation_mode:
+              only_one_in_place: 'unicamente puede ser agendada una recurrencia en curso'
+            anchor_to_start:
+              start_mode_requires_date: 'no se pueden crear recurrencias basadas en la fecha de inicio para peticiones sin fecha de inicio'
+              due_mode_requires_date: 'no se pueden crear recurrencias basadas en la fecha de fin para peticiones sin fecha de fin'
+            date_limit:
+              not_in_future: 'la fecha limite de recurrencia debe estar en el futuro'
+  project_menu_caption: 'Agenda'
+  journal_warning: "<b>Advertencia</b>: no se pudo renovar la recurrencia, %{msg}."
+  settings:
+    issue_recurrences:
+      author: 'Establecer como autor de la recurrencia'
+      author_unchanged: 'el autor de la petición'
+      keep_assignee: 'Mantener asignación de la recurrencia previa'
+      keep_assignee_hint: 'si no está tildado, se aplican las reglas de asignación por defecto'
+      add_journal: 'Añadir nota en el historial de la recurrencia'
+      add_journal_hint: 'el historial es añadiddo unicamente en la petición de origen (no en la recurrencia)'
+  issue_recurrences:
+    index:
+      heading: 'Agenda'
+      issue: 'Petición'
+      last_recurrence: 'Ultima recurrencia'
+      mode: 'Cada'
+      next_recurrence: 'Próxima recurrencia'
+      include_subtasks: 'Incluye sub-tareas?'
+      creation_mode: 'Crear'
+      anchor_mode: 'Basado en'
+      limit: 'Límite'
+      count: '#'
+      anchor_modes:
+        first_issue_fixed: 'primer petición'
+        last_issue_fixed: 'última petición'
+        last_issue_flexible: 'última petición cerrada como'
+        last_issue_flexible_on_delay: 'última petición cerrada si retraso es'
+  issues:
+    issue_recurrences_hook:
+      recurrences: 'Agenda'
+      this_is_recurrence: 'Es recurrencia de'
+      button_details: 'Detalles'
+    recurrences:
+      index:
+        last_recurrence: 'Ultima:'
+        next_recurrence: 'Próxima:'
+      details:
+      form:
+        creation_modes:
+          copy_first: 'Copiar <b>petición</b>'
+          copy_last: 'Copiar <b>última recurrencia</b> de la petición'
+          in_place: 'Modificar petición <b>en curso</b>'
+        include_subtasks:
+          :true: 'incluir sub-tareas'
+          :false: 'excluir sub-tareas'
+        subtasks: 'sub-tareas'
+        every: 'cada'
+        mode_intervals:
+          daily: 'día'
+          daily_wday: 'días laborales'
+          weekly: 'semana'
+          monthly_day_from_first: 'mes'
+          monthly_day_to_last: 'mes'
+          monthly_dow_from_first: 'mes'
+          monthly_dow_to_last: 'mes'
+          monthly_wday_from_first: 'mes'
+          monthly_wday_to_last: 'mes'
+          yearly: 'año'
+        mode_descriptions:
+          daily: ''
+          daily_wday: ''
+          weekly: ''
+          monthly_day_from_first: 'el mismo día del mes'
+          monthly_day_to_last: 'el mismo día del final de mes'
+          monthly_dow_from_first: 'en el mismo día de la semana del mes'
+          monthly_dow_to_last: 'en el mismo día laborable desde finales de mes'
+          monthly_wday_from_first: 'en el mismo dia laborable del mes'
+          monthly_wday_to_last: 'en el mismo día laborable de fin de mes.'
+          yearly: ''
+        mode_modifiers:
+          daily: ''
+          daily_wday: ''
+          weekly: ''
+          monthly_day_from_first: 'en %{days_from_bom} día'
+          monthly_day_to_last: 'en %{days_to_eom} hasta el último día'
+          monthly_dow_from_first: 'en %{dows_from_bom} %{day_of_week}'
+          monthly_dow_to_last: 'en %{dows_to_eom} hasta el último %{day_of_week}'
+          monthly_wday_from_first: 'en %{wdays_from_bom} día laboral'
+          monthly_wday_to_last: 'en %{wdays_to_eom} hasta el último día laborable'
+          yearly: ''
+        based_on: 'basado en'
+        anchor_modes:
+          first_issue_fixed: 'esta <b>petición</b>'
+          last_issue_fixed: '<b>última recurrencia</b>'
+          last_issue_flexible: '<b>Fecha de cierre de última recurrencia</b>
+            - el siguiente se crea solo después de cerrar el anterior - como'
+          last_issue_flexible_on_delay: '<b>última fecha de recurrencia, si se cierra a tiempo,</b>
+            de lo contrario emplear como fecha de cierre'
+        anchor_to_start:
+          :true: '<b>fecha de inicio</b>'
+          :false: '<b>fecha de fin</b>'
+        delayed_by: 'más'
+        delay_modes:
+          day: 'día(s)'
+          week: 'semana(s)'
+          month: 'mes(es)'
+        delay_intervals:
+          day: 'día'
+          week: 'semana'
+          month: 'mes'
+        until: 'repetir <b>hasta</b>'
+        forever: 'por siempre'
+        recurrences: 'recurrencia(s)'
+        recurrence: 'recurrencia'
+
